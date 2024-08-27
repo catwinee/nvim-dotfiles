@@ -2,10 +2,10 @@ return {
   "xeluxee/competitest.nvim",
   dependencies = "MunifTanjim/nui.nvim",
   config = function()
-    vim.keymap.set('n', '<leader>at', ':CompetiTest add_testcase<CR>')
-    vim.keymap.set('n', '<leader>rt', ':CompetiTest run<CR>')
-    vim.keymap.set('n', '<leader>et', ':CompetiTest edit_testcase<CR>')
-    vim.keymap.set('n', '<leader>dt', ':CompetiTest delete_testcase<CR>')
+    vim.keymap.set("n", "<leader>at", ":CompetiTest add_testcase<CR>")
+    vim.keymap.set("n", "<leader>rt", ":CompetiTest run<CR>")
+    vim.keymap.set("n", "<leader>et", ":CompetiTest edit_testcase<CR>")
+    vim.keymap.set("n", "<leader>dt", ":CompetiTest delete_testcase<CR>")
     require("competitest").setup({
       local_config_file_name = ".competitest.lua",
       floating_border = "rounded",
