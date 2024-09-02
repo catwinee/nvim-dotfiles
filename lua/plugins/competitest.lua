@@ -95,7 +95,7 @@ return {
         c = { exec = "gcc", args = { "-Wall", "$(FNAME)", "-o", "./bin/$(FNOEXT)" } },
         cpp = { exec = "g++", args = { "-DDEBUG", "-Wall", "$(FNAME)", "-o", "./bin/$(FNOEXT)" } },
         rust = { exec = "rustc", args = { "$(FNAME)" } },
-        java = { exec = "javac", args = { "$(FNAME)" } },
+        java = { exec = "javac", args = { "$(FNAME)", "-d", "./bin/" } },
       },
       running_directory = ".",
       run_command = {
@@ -103,7 +103,7 @@ return {
         cpp = { exec = "./bin/$(FNOEXT)" },
         rust = { exec = "./$(FNOEXT)" },
         python = { exec = "python", args = { "$(FNAME)" } },
-        java = { exec = "java", args = { "$(FNOEXT)" } },
+        java = { exec = "java", args = { "-classpath", "bin/", "$(FNOEXT)" } },
       },
       multiple_testing = -1,
       maximum_time = 5000,
