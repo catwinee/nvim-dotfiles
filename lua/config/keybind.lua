@@ -1,1 +1,1 @@
-vim.keymap.set("n", "<leader>ac", 'gg0"+yG<C-o>')
+vim.api.nvim_set_keymap("n", "<leader>ac", [[:%y+<CR>]], { noremap = true, silent = true })

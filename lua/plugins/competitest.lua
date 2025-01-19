@@ -103,6 +103,7 @@ return {
         cpp = { exec = "./bin/$(FNOEXT)" },
         rust = { exec = "./$(FNOEXT)" },
         python = { exec = "python", args = { "$(FNAME)" } },
+        sh = { exec = "sh", args = { "./$(FNAME)" } },
         java = { exec = "java", args = { "-classpath", "bin/", "$(FNOEXT)" } },
       },
       multiple_testing = -1,
